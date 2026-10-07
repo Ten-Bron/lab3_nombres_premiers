@@ -21,7 +21,7 @@ using namespace std;
 int main() {
     const short int n_col = 5;
     int limite;
-    char bStart_again;
+    char start_again;
     // ensure user typed valid input
     do {
         // manage user input
@@ -60,14 +60,12 @@ int main() {
         }
         // ask user if retry
         do {
-
             cout <<endl<<endl<< "Voulez-vous recommancer [O/N] : " <<endl;
-            cin >> bStart_again;
+            cin >> start_again;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
         }
         // ensure user types `O` or `N`.
-        while (bStart_again!='O' && bStart_again!='N');
-    }while ((limite <2 || limite >1000) || (bStart_again == 'O'));
-
+        while (start_again!='O' && start_again!='N');
+    }while ((limite <2 || limite >1000) || (start_again == 'O'));
     return 0;
 }
