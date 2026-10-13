@@ -15,7 +15,6 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
-//#include <cctype>
 using namespace std;
 int main() {
     const short int n_col = 5;
@@ -28,15 +27,14 @@ int main() {
             cout << "Entrez une valeur [2-1000] : " << endl;
             cin >> limite;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        }
-        while (limite < 2 || limite > 1000);
+        }while ((limite <2 || limite >1000));
         cout << "voici la liste des nombres premiers: " << endl;
         int nb_of_pnumber = 0;
         for (int i = 2; i <= limite; ++i) {
             // i being the current number between 1-user_number
             // we are working on
             bool bIs_a_prime_number = true;
-            for (int j = 2; j <= i/2 && bIs_a_prime_number; ++j) {
+            for (int j = 2; j<=i/2 && bIs_a_prime_number; ++j) {
                 // THIS BLOC: we are checking here if i is dividable by j.
                 // if i has already more than 2 dividers,
                 // we dont need to check further, hes not a pn anyway.
@@ -57,13 +55,12 @@ int main() {
         }
         // ask user if retry
         do {
-            cout <<endl<<endl<< "Voulez-vous recommencer [O/N] : " <<endl;
+            cout <<endl<<endl<< "Voulez-vous recommancer [O/N] : " <<endl;
             cin >> start_again;
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
-            start_again = toupper(start_again);
         }
         // ensure user types `O` or `N`.
         while (start_again!='O' && start_again!='N');
-    }while (start_again == 'O');
+    }while ((start_again == 'O'));
     return 0;
 }
