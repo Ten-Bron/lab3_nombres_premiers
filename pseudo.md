@@ -27,5 +27,5 @@ LAYER 2
 9) saisie de l'utilisateur
 10) si la saisie est 'N', stopper le programme 
 11) si la saisie est 'O', relancer le programme au point 1).
-12) sinon redemander une nouvelle saisie au point 9).
+12) sinon redemander une nouvelle saisie au point 9.
 13) fin du progamme.
