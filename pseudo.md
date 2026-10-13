@@ -1,54 +1,31 @@
-LAYER 1:
-Demander à l'utilisateur de saisir une valeur comprise entre 2 et 1000.
-Lire la valeur saisie par l'utilisateur.
-Vérifier si la valeur se situe entre 2 et 1000.
-Si la valeur est inférieure à 2 ou supérieure à 1000, recommencer à l'étape 2.
-Sinon, continuer à l'étape suivante.
-Afficher tous les nombres premiers compris entre 2 inclus et la valeur saisie exclue.
-Demander à l'utilisateur s'il souhaite recommencer le programme.
-Lire la réponse de l'utilisateur.
-Vérifier la réponse :
-Si la réponse est 'N', terminer le programme.
-Si la réponse est 'O', recommencer à l'étape 2.
-Sinon, demander à nouveau une réponse à l'utilisateur.
-Fin du programme.
+Pseudo code:
 
-LAYER 2:
-Début du programme.
-Déclarer les variables nécessaires :
-limite : valeur saisie par l'utilisateur.
-n_col : nombre de nombres premiers affichés par ligne, fixé à 5.
-nb_of_pnumber : compteur du nombre de nombres premiers trouvés.
-start_again : réponse de l'utilisateur concernant le redémarrage du programme.
-i : nombre dont on vérifie s'il est premier.
-j : diviseur potentiel du nombre i.
-bIs_a_prime_number : indicateur permettant de déterminer si i possède un diviseur autre que 1 et lui-même.
-Afficher le message : Entrez une valeur [2-1000] :
-Lire la valeur saisie par l'utilisateur et la stocker dans limite.
-Vérifier si limite est comprise entre 2 et 1000 inclus.
-Si ce n'est pas le cas, revenir à l'étape 3.
-Sinon, continuer.
-Afficher le message : Voici la liste des nombres premiers :
-Initialiser nb_of_pnumber à 0.
-Pour chaque entier i allant de 2 jusqu'à limite - 1, effectuer les opérations suivantes :
-Initialiser bIs_a_prime_number à FAUX.
-Pour chaque entier j allant de 2 jusqu'à i - 1 :
-Si bIs_a_prime_number vaut VRAI ou si j est strictement supérieur à la moitié de i, passer à l'itération suivante.
-Sinon, vérifier si le reste de la division de i par j est égal à 0.
-Si c'est le cas, affecter VRAI à bIs_a_prime_number, car i possède un diviseur autre que 1 et lui-même.
-Après avoir parcouru les valeurs de j, vérifier la valeur de bIs_a_prime_number.
-Si elle vaut FAUX, alors i est un nombre premier :
-Incrémenter nb_of_pnumber de 1.
-Afficher i sur le terminal, en réservant une largeur de 10 caractères.
-Si nb_of_pnumber est divisible par 5, effectuer un retour à la ligne.
-Sinon, ne rien afficher pour i.
-Vérifier si nb_of_pnumber est égal à 0.
-Si c'est le cas, afficher le message indiquant que limite est elle-même un nombre premier.
-Afficher le message : Voulez-vous recommancer [O/N] :
-Lire la réponse de l'utilisateur et la stocker dans start_again.
-Vérifier la réponse saisie.
-Si start_again est différente de 'O' et de 'N', revenir à l'étape 10.
-Si start_again vaut 'N', terminer le programme.
-Si start_again vaut 'O', revenir à l'étape 3.
-Fin du programme.
+Layer 1
+1) debut programme
+2) demande a l'utilisateur de saisir une entrée.
+3) verifie si la saisie se trouve entre 2 et 1000 sinon relance le programme au point 1
+4) saisie de l'entrée utilisateur
+5) affiche tous les nombre premiers qui se situent entre 2 et le nombre saisi.
+6) demande a l'utilisateur s'il veux relancer le programme
+7) saisie de l'utilisateur
+8) si la saisie est 'N', stopper le programme
+9) si la saisie est 'O', relancer le programme au point 1).
+10) sinon redemander une nouvelle saisie au point 5).
+11) fin du programme.
 
+LAYER 2 
+1) debut de programme
+2) affiche "Entrez une valeur [2-1000] : "
+3) saisie de l'utilisateur
+4) verifie is la saisie se trouve entre 2-1000, sinon relance le programme au point 1
+5) pour chaque elements i se situant entre 2-1000, on va compter le nombre de ses diviseurs
+6) pour chaque element j entre 2 et la moitié de l'element i, 
+    on verifie si cet element j est diviseur de l'element i, si c'est le cas, on incremente
+    le nombre de diviseur de 1.
+7) si le nombre de diviseur est strictement superieur a 0, on affiche l'element i dans le terminal.
+8) afficher:Voulez-vous recommancer [O/N] : 
+9) saisie de l'utilisateur
+10) si la saisie est 'N', stopper le programme 
+11) si la saisie est 'O', relancer le programme au point 1).
+12) sinon redemander une nouvelle saisie au point 9).
+13) fin du progamme.
